@@ -1,6 +1,6 @@
 module github.com/zaahidali/task_manager_api
 
-go 1.23.2
+go 1.23
 
 require (
 	github.com/gin-gonic/gin v1.10.0
