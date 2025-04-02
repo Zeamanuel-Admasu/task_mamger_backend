@@ -2,7 +2,7 @@ name: Go Test CI
 
 on:
   push:
-    branches: [main, final_task]  # You can list branches
+    branches: [main, final_task]
   pull_request:
     branches: [main]
 
@@ -21,9 +21,11 @@ jobs:
 
       - name: 📦 Install dependencies
         run: go mod tidy
+        working-directory: ./task_manager_api  # Ensure this points to the directory with the go.mod file
 
       - name: 🧪 Run unit tests
         run: go test ./... -v -coverprofile=coverage.out
+        working-directory: ./task_manager_api  # Ensure this points to the directory with the tests
 
       - name: 📊 Upload coverage report (optional)
         uses: actions/upload-artifact@v4
