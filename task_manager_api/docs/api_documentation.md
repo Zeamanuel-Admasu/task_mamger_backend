@@ -1,0 +1,1 @@
+It is published using postman and you can get the link [here](https://documenter.getpostman.com/view/32224060/2sAYkKHceb)
